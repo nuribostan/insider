@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .insider_related_products_container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .insider_related_products_content {
+            position: relative;
+            width: 95%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .insider_related_products_title {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .insider_related_products_title h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .insider_related_products_item_list {
+            width: 100% !important;
+            scroll-behavior: smooth;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 15px;
+            margin: 0 auto;
+        }
+
+        .insider_related_products_item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-self: flex-start;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .insider_related_products_item_img {
+            position: relative;
+            width: calc(100vw / 6.3);
+            height: calc(100vh / 2.5);
+            overflow: hidden;
+        }
+
+        .insider_related_products_item_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .insider_related_products_item_title h4 {
+            font-size: 14px;
+            font-weight: 200;
+            color: #302e2b;
+            margin-top: 20px;
+            text-decoration: none;
+            line-height: .9;
+        }
+
+        .insider_related_products_item_price p {
+            color: #193db0;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 22px;
+            font-weight: bold;
+        }
+
+        .insider_related_products_item_favorite {
+            cursor: pointer;
+            position: absolute;
+            top: 9px;
+            right: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+            border: solid 0.5px #b6b7b9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+        }
+
+        .insider_related_products_item_favorite:active {
+            transform: scale(0.9);
+        }
+
+        .insider_related_products_item_favorite img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .insider_related_products_content_left_button,
+        .insider_related_products_content_right_button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+            z-index: 999;
+            width: 20px;
+        }
+
+        .insider_related_products_content_left_button {
+            left: 15px;
+        }
+
+        .insider_related_products_content_right_button {
+            right: 15px;
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        @media screen and (max-width: 768px){
+
+            .insider_related_products_item_img {
+                width: calc(100vw / 2);
+                height: calc(100vh / 2.5);
+            }
+
+            .insider_related_products_item_favorite img {
+                width: 15px;
+                height: 15px;
+            }
+
+            .insider_related_products_item_title h4 {
+                font-size: 12px;
+            }
+
+            .insider_related_products_item_price p {
+                font-size: 14px;
+            }
+
+            .insider_related_products_content_left_button,
+            .insider_related_products_content_right_button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="insider_related_products_container">
+        <div class="insider_related_products_content">
+            <div class="insider_related_products_title">
+                <h2>Related Products</h2>
+            </div>
+            <div class="insider_related_products_item_list">
+                <div class="insider_related_products_item">
+                    <a href="#" class="insider_related_products_item_img">
+                        <img src="https://resmim.net/cdn/2024/03/23/fNUF4K.jpg" alt="">
+                        <div class="insider_related_products_item_favorite">
+                            <img src="https://resmim.net/cdn/2024/03/23/fNqb1C.png" alt="">
+                        </div>
+                    </a>
+                    <div class="insider_related_products_item_title">
+                        <a href="#">
+                            <h4>Product Title 1</h4>
+                        </a>
+                    </div>
+                    <div class="insider_related_products_item_price">
+                        <p>$100</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="insider_related_products_content_left_button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14.242" height="24.242" viewBox="0 0 14.242 24.242">
+                <path fill="none" stroke="#333" stroke-linecap="round" stroke-width="3px"
+                    d="M2106.842 2395.467l-10 10 10 10" transform="translate(-2094.721 -2393.346)"></path>
+            </svg>
+        </button>
+        <button class="insider_related_products_content_right_button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14.242" height="24.242" viewBox="0 0 14.242 24.242">
+                <path fill="none" stroke="#333" stroke-linecap="round" stroke-width="3px"
+                    d="M2106.842 2395.467l-10 10 10 10" transform="translate(-2094.721 -2393.346)"></path>
+            </svg>
+        </button>
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const fetchDataAndSetLocalStorage = () => {
+            fetch("https://gist.githubusercontent.com/sevindi/5765c5812bbc8238a38b3cf52f233651/raw/56261d81af8561bf0a7cf692fe572f9e1e91f372/products.json")
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(product => product.isFav = false);
+                    localStorage.setItem('related_products', JSON.stringify(data));
+                });
+        };
+
+        if (!localStorage.getItem("related_products")) {
+            fetchDataAndSetLocalStorage();
+        }
+
+        const products = JSON.parse(localStorage.getItem('related_products'));
+
+        const list = document.querySelector('.insider_related_products_item_list');
+        const prev = document.querySelector('.insider_related_products_content_left_button');
+        const next = document.querySelector('.insider_related_products_content_right_button');
+        let scrollAmount = 0;
+
+        function renderProducts(products) {
+            list.innerHTML = '';
+
+            products.forEach(product => {
+                const item = document.createElement('div');
+                item.classList.add('insider_related_products_item');
+
+                const itemImg = document.createElement('a');
+                itemImg.classList.add('insider_related_products_item_img');
+                const img = document.createElement('img');
+                img.src = `${product.img}`;
+                itemImg.insertAdjacentElement('afterbegin', img);
+                const fav = document.createElement('div');
+                fav.classList.add('insider_related_products_item_favorite');
+                const favImg = document.createElement('img');
+                favImg.src = product.isFav ? 'https://resmim.net/cdn/2024/03/23/fNqztx.png' : 'https://resmim.net/cdn/2024/03/23/fNqb1C.png';
+                fav.insertAdjacentElement('afterbegin', favImg);
+                itemImg.insertAdjacentElement('beforeend', fav);
+
+                const itemTitle = document.createElement('div');
+                itemTitle.classList.add('insider_related_products_item_title');
+                const title = document.createElement('a');
+                const titleH4 = document.createElement('h4');
+                titleH4.innerHTML = product.name;
+                title.insertAdjacentElement('afterbegin', titleH4);
+                itemTitle.insertAdjacentElement('beforeend', title);
+                item.insertAdjacentElement('beforeend', itemTitle);
+
+                const itemPrice = document.createElement('div');
+                itemPrice.classList.add('insider_related_products_item_price');
+                const price = document.createElement('p');
+                price.innerHTML = `${product.price} TRY`;
+                itemPrice.insertAdjacentElement('afterbegin', price);
+                item.insertAdjacentElement('beforeend', itemPrice);
+
+                item.insertAdjacentElement('afterbegin', itemImg);
+
+                list.insertAdjacentElement('beforeend', item);
+
+                fav.addEventListener('click', () => {
+                    product.isFav = !product.isFav;
+                    favImg.src = product.isFav ? 'https://resmim.net/cdn/2024/03/23/fNqztx.png' : 'https://resmim.net/cdn/2024/03/23/fNqb1C.png';
+                    localStorage.setItem('related_products', JSON.stringify(products));
+                });
+            });
+        }
+
+        renderProducts(products);
+
+        prev.addEventListener("click", (e) => {
+            scrollAmount = Math.max(0, scrollAmount - 600);
+            list.style.transform = `translateX(-${scrollAmount}px)`;
+            list.style.transition = 'transform 0.5s ease-in-out';
+        });
+
+        next.addEventListener("click", (e) => {
+            scrollAmount = Math.min(scrollAmount + 600, list.scrollWidth - list.clientWidth);
+            list.style.transform = `translateX(-${scrollAmount}px)`;
+            list.style.transition = 'transform 0.5s ease-in-out';
+        });
+
+
+        if (window.innerWidth < 768) {
+
+            list.style.overflowX = "scroll";
+            list.style.scrollBehavior = "smooth";
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+
+            list.addEventListener("touchstart", (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX - ul.offsetLeft;
+                scrollLeft = ul.scrollLeft;
+            });
+
+            list.addEventListener("touchend", () => {
+                isDown = false;
+            });
+
+            list.addEventListener("touchmove", (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.touches[0].pageX - ul.offsetLeft;
+                const walk = (x - startX) * 3;
+                ul.scrollLeft = scrollLeft - walk;
+            });
+
+        }
+
+    });
+</script>
+
+
+</html>
